@@ -35,6 +35,7 @@ class Snake(pg.sprite.Sprite):
         # проверяем, пересекаются ли голова змейки с яблоком 
         if head_rect.collideobjects([apple]): 
             # добавляем новый элемент тела в конец 
+            self.body.append((self.body[-1][0] - 5000 * dx, self.body[-1][1] - 5000 * dy))
             self.body.append((self.body[-1][0] - 5000 * dx, self.body[-1][1] - 5000 * dy)) 
             return True # если произошло столкновение 
         return False # если не произошло 

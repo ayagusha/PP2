@@ -81,14 +81,7 @@ class Snake(pygame.sprite.Sprite):
              
 class Food(pygame.sprite.Sprite):
     def __init__(self): 
-        super().__init__() 
-        self.image = pygame.Surface((50, 50))  
-        self.rect = self.image.get_rect()  
-        
-        self.PlaceApple() 
-    def PlaceApple(self): 
-        x, y = random.randrange(0, 350, 50), random.randrange(0, 350, 50) 
-        Point(x, y)
+        self.location=Point(4,10)  
     def draw(self):
         point=self.location
         f=pygame.image.load('image/orange.jpg')

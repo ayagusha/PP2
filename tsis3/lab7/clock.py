@@ -30,7 +30,7 @@ while done:
     s=t.microsecond + t.second*(10**6)
     m=t.minute
     minutes, minutes_rect = rotate(minutes_copy, minutes_rect, -(m*6))
-    seconds, seconds_rect = rotate(seconds_copy, seconds_rect, -(s*0.000006))
+    seconds, seconds_rect = rotate(seconds_copy, seconds_rect, +(s*0.000006))
     
     screen.blit(pygame.image.load('images/bg.png'),(0,0))
     screen.blit(minutes, minutes_rect)
